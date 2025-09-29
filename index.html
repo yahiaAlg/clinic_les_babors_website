@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinique Les Babors - مصحة البابور</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="copy-notification" id="copyNotification">
+        <i data-feather="check-circle" style="width: 18px; height: 18px; margin-right: 0.5rem;"></i>
+        Message WhatsApp envoyé!
+    </div>
+
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i data-feather="activity" style="width: 28px; height: 28px; margin-right: 0.5rem;"></i>
+                Clinique Les Babors
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#doctors">Médecins</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content" data-aos="fade-right">
+                        <h1>Votre Santé, Notre Priorité<br><small style="font-size: 0.6em;">صحتكم أولويتنا</small></h1>
+                        <p>Découvrez l'excellence médicale à la Clinique Les Babors - مصحة البابور. Notre équipe de
+                            spécialistes qualifiés vous offre des soins de santé complets avec compassion, innovation et
+                            expertise.</p>
+
+                        <div class="hero-stats">
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Spécialités</span>
+                            </div>
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                                <span class="stat-number">12+</span>
+                                <span class="stat-label">Médecins Experts</span>
+                            </div>
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Urgences</span>
+                            </div>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="400">
+                            <button class="btn-hero" onclick="bookAppointment()">
+                                <i data-feather="calendar" style="width: 22px; height: 22px;"></i>
+                                Prendre RDV
+                            </button>
+                            <button class="btn-hero-outline" onclick="scrollToSection('services')">
+                                <i data-feather="arrow-down" style="width: 20px; height: 20px;"></i>
+                                Nos Services
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Équipe Médicale - مصحة البابور" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Nos Spécialités Médicales</h2>
+                <p>مؤسسة استشفائية خاصة تقدم خدمات طبية متخصصة وشاملة بأحدث التقنيات والكوادر المؤهلة</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-feather="heart" style="width: 50px; height: 50px;"></i>
+                        </div>
+                        <h4>Cardiologie | أمراض القلب</h4>
+                        <p>Soins cardiaques avancés avec diagnostic et traitement de pointe pour toutes les pathologies
+                            du cœur.</p>
+                        <ul class="service-features">
+                            <li>Dr A.HASSOUS - Cardiologue</li>
+                            <li>Cardiologie interventionnelle</li>
+                            <li>Explorations cardiaques</li>
+                            <li>Cathétérisme cardiaque</li>
+                            <li>Soins d'urgence cardiaque</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-feather="users" style="width: 50px; height: 50px;"></i>
+                        </div>
+                        <h4>Gynéco-Obstétrique | أمراض النساء والتوليد</h4>
+                        <p>Soins spécialisés pour la santé féminine et suivi de grossesse avec expertise et compassion.
+                        </p>
+                        <ul class="service-features">
+                            <li>Dr M.BOURZAMI</li>
+                            <li>Dr S.SAHI</li>
+                            <li>Dr S.AISSA</li>
+                            <li>Suivi de grossesse</li>
+                            <li>Chirurgie gynécologique</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-feather="activity" style="width: 50px; height: 50px;"></i>
+                        </div>
+                        <h4>Médecine Nucléaire | الطب النووي</h4>
+                        <p>Diagnostics et traitements avancés utilisant les techniques de médecine nucléaire modernes.
+                        </p>
+                        <ul class="service-features">
+                            <li>Dr T.SLIMANI - Scintigraphie</li>
+                            <li>Irathérapie</li>
+                            <li>Imagerie nucléaire</li>
+                            <li>Thérapies isotopiques</li>
+                            <li>Médecine nucléaire thérapeutique</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-feather="scissors" style="width: 50px; height: 50px;"></i>
+                        </div>
+                        <h4>Chirurgie | الجراحة</h4>
+                        <p>Services chirurgicaux complets avec des techniques modernes et des spécialistes expérimentés.
+                        </p>
+                        <ul class="service-features">
+                            <li>Dr R.BENLABGA - Chirurgie générale</li>
+                            <li>Dr S.BENOUDINA - Orthopédie</li>
+                            <li>Chirurgie infantile</li>
+                            <li>Chirurgie vasculaire - Dr T.BENNACER</li>
+                            <li>Urologie</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-feather="ear" style="width: 50px; height: 50px;"></i>
+                        </div>
+                        <h4>ORL | أذن أنف حنجرة</h4>
+                        <p>Spécialisation en oto-rhino-laryngologie pour tous les troubles de l'oreille, nez et gorge.
+                        </p>
+                        <ul class="service-features">
+                            <li>Dr W.BENABID - Spécialiste ORL</li>
+                            <li>Chirurgie ORL</li>
+                            <li>Troubles auditifs</li>
+                            <li>Pathologies nasales</li>
+                            <li>Chirurgie des amygdales</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-feather="shield" style="width: 50px; height: 50px;"></i>
+                        </div>
+                        <h4>Services Complémentaires</h4>
+                        <p>Services médicaux complets incluant urgences, laboratoire et consultations spécialisées.</p>
+                        <ul class="service-features">
+                            <li>Dr S.BOUSDIRA - Médecine générale</li>
+                            <li>Anesthésie-Réanimation</li>
+                            <li>Explorations vasculaires</li>
+                            <li>Laboratoire d'analyses</li>
+                            <li>Service des urgences 24/7</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="doctors" class="doctors">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Nos Médecins Spécialistes</h2>
+                <p>فريق من الأطباء المختصين والمؤهلين لتقديم أفضل الخدمات الطبية</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="doctor-card">
+                        <div class="doctor-header">
+                            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                alt="Dr A.HASSOUS" class="doctor-image">
+                            <h3 class="doctor-name">Dr A.HASSOUS</h3>
+                            <p class="doctor-specialty">Cardiologue | أخصائي أمراض القلب</p>
+                            <div class="doctor-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+
+                        <div class="doctor-body">
+                            <div class="doctor-info">
+                                <div class="info-item" onclick="openWhatsApp('+213557123456')">
+                                    <i data-feather="message-circle"></i>
+                                    <span class="info-text">WhatsApp</span>
+                                </div>
+                                <div class="info-item">
+                                    <i data-feather="clock"></i>
+                                    <span class="info-text">Lun-Ven: 9h00 - 17h00</span>
+                                </div>
+                                <div class="info-item">
+                                    <i data-feather="award"></i>
+                                    <span class="info-text">15+ Ans d'expérience</span>
+                                </div>
+                            </div>
+
+                            <div class="specialties">
+                                <span class="specialty-tag">Cardiologie</span>
+                                <span class="specialty-tag">Cardiologie interventionnelle</span>
+                            </div>
+
+                            <div class="doctor-actions">
+                                <button class="btn-doctor btn-primary-doctor" onclick="bookWithDoctor('Dr A.HASSOUS')">
+                                    <i data-feather="calendar" style="width: 18px; height: 18px;"></i>
+                                    RDV
+                                </button>
+                                <button class="whatsapp-btn" onclick="openWhatsApp('+213557123456')">
+                                    <i data-feather="message-circle" style="width: 18px; height: 18px;"></i>
+                                    WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="doctor-card">
+                        <div class="doctor-header">
+                            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                alt="Dr M.BOURZAMI" class="doctor-image">
+                            <h3 class="doctor-name">Dr M.BOURZAMI</h3>
+                            <p class="doctor-specialty">Gynécologue-Obstétricien | أخصائي نساء وتوليد</p>
+                            <div class="doctor-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+
+                        <div class="doctor-body">
+                            <div class="doctor-info">
+                                <div class="info-item" onclick="openWhatsApp('+213557234567')">
+                                    <i data-feather="message-circle"></i>
+                                    <span class="info-text">WhatsApp</span>
+                                </div>
+                                <div class="info-item">
+                                    <i data-feather="clock"></i>
+                                    <span class="info-text">Lun-Sam: 8h00 - 18h00</span>
+                                </div>
+                                <div class="info-item">
+                                    <i data-feather="award"></i>
+                                    <span class="info-text">12+ Ans d'expérience</span>
+                                </div>
+                            </div>
+
+                            <div class="specialties">
+                                <span class="specialty-tag">Gynécologie</span>
+                                <span class="specialty-tag">Obstétrique</span>
+                                <span class="specialty-tag">Échographie</span>
+                            </div>
+
+                            <div class="doctor-actions">
+                                <button class="btn-doctor btn-primary-doctor" onclick="bookWithDoctor('Dr M.BOURZAMI')">
+                                    <i data-feather="calendar" style="width: 18px; height: 18px;"></i>
+                                    RDV
+                                </button>
+                                <button class="whatsapp-btn" onclick="openWhatsApp('+213557234567')">
+                                    <i data-feather="message-circle" style="width: 18px; height: 18px;"></i>
+                                    WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="doctor-card">
+                        <div class="doctor-header">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                alt="Dr R.BENLABGA" class="doctor-image">
+                            <h3 class="doctor-name">Dr R.BENLABGA</h3>
+                            <p class="doctor-specialty">Chirurgien Général | أخصائي جراحة عامة</p>
+                            <div class="doctor-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+
+                        <div class="doctor-body">
+                            <div class="doctor-info">
+                                <div class="info-item" onclick="openWhatsApp('+213557345678')">
+                                    <i data-feather="message-circle"></i>
+                                    <span class="info-text">WhatsApp</span>
+                                </div>
+                                <div class="info-item">
+                                    <i data-feather="clock"></i>
+                                    <span class="info-text">Mar-Sam: 10h00 - 19h00</span>
+                                </div>
+                                <div class="info-item">
+                                    <i data-feather="award"></i>
+                                    <span class="info-text">18+ Ans d'expérience</span>
+                                </div>
+                            </div>
+
+                            <div class="specialties">
+                                <span class="specialty-tag">Chirurgie Générale</span>
+                                <span class="specialty-tag">Chirurgie Digestive</span>
+                                <span class="specialty-tag">Laparoscopie</span>
+                            </div>
+
+                            <div class="doctor-actions">
+                                <button class="btn-doctor btn-primary-doctor" onclick="bookWithDoctor('Dr R.BENLABGA')">
+                                    <i data-feather="calendar" style="width: 18px; height: 18px;"></i>
+                                    RDV
+                                </button>
+                                <button class="whatsapp-btn" onclick="openWhatsApp('+213557345678')">
+                                    <i data-feather="message-circle" style="width: 18px; height: 18px;"></i>
+                                    WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-text">
+                        <h2>Pourquoi Choisir Clinique Les Babors?</h2>
+                        <p>Établissement hospitalier privé de référence dans la région de Sétif, la Clinique Les Babors
+                            - مصحة البابور offre des services médicaux de haute qualité avec plus de 15 spécialités
+                            médicales.</p>
+                        <p>Notre engagement envers l'excellence médicale, combiné à des installations modernes et une
+                            équipe de spécialistes expérimentés, garantit des soins de santé exceptionnels dans un
+                            environnement confortable et sécurisé.</p>
+
+                        <ul class="about-features">
+                            <li>Équipements Médicaux de Pointe</li>
+                            <li>Service d'Urgences 24/7</li>
+                            <li>Équipe Médicale Expérimentée</li>
+                            <li>Soins Centrés sur le Patient</li>
+                            <li>Assurance Maladie Acceptée</li>
+                            <li>Emplacement Accessible</li>
+                        </ul>
+
+                        <button class="btn-hero" onclick="scrollToSection('contact')">
+                            Nous Contacter
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Installations Médicales Modernes - مصحة البابور" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Contactez-Nous | اتصلوا بنا</h2>
+                <p>Prêt à prendre le prochain pas dans votre parcours de santé? Contactez-nous dès aujourd'hui pour
+                    prendre rendez-vous.</p>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i data-feather="phone" style="width: 40px; height: 40px;"></i>
+                        </div>
+                        <h4>Appelez-nous</h4>
+                        <p>+213 (0) 36 XX XX XX</p>
+                        <p class="text-muted">Ligne d'urgence 24/7</p>
+                        <button class="whatsapp-btn" onclick="openWhatsApp('+21336XXXXXX')">
+                            <i data-feather="message-circle"></i>
+                            WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i data-feather="mail" style="width: 40px; height: 40px;"></i>
+                        </div>
+                        <h4>Email</h4>
+                        <p>info@cliniquebaabors.dz</p>
+                        <p class="text-muted">Réponse sous 24 heures</p>
+                        <button class="btn btn-outline-primary" onclick="contactUs()">
+                            Envoyer Email
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i data-feather="map-pin" style="width: 40px; height: 40px;"></i>
+                        </div>
+                        <h4>Nous Rendre Visite</h4>
+                        <p>Cité Les Babors<br>Sétif, Algérie<br>19000</p>
+                        <button class="btn btn-outline-primary" onclick="openMap()">
+                            Directions
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up" data-aos-delay="400">
+                    <div class="contact-form">
+                        <h3 class="text-center mb-4">Envoyez-nous un Message</h3>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Votre Nom" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Votre Email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control" placeholder="Votre Téléphone">
+                                </div>
+                                <div class="col-md-6">
+                                    <select class="form-control" required>
+                                        <option value="">Choisir une Spécialité</option>
+                                        <option value="cardiologie">Cardiologie</option>
+                                        <option value="gyneco">Gynéco-Obstétrique</option>
+                                        <option value="chirurgie">Chirurgie Générale</option>
+                                        <option value="orthopedie">Orthopédie</option>
+                                        <option value="orl">ORL</option>
+                                        <option value="medecine">Médecine Générale</option>
+                                        <option value="urgences">Urgences</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="5" placeholder="Votre Message"
+                                        required></textarea>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn-submit">
+                                        <i data-feather="send"
+                                            style="width: 20px; height: 20px; margin-right: 0.5rem;"></i>
+                                        Envoyer Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12" data-aos="fade-up" data-aos-delay="500">
+                    <div class="map-section">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3248.8659574155826!2d5.398421076527685!3d36.19088797254843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128773e96a0e3e59%3A0x40d3ca96e7c85d46!2sS%C3%A9tif!5e0!3m2!1sfr!2sdz!4v1635959592679!5m2!1sfr!2sdz"
+                            width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5>
+                        <i data-feather="activity" style="width: 24px; height: 24px; margin-right: 0.5rem;"></i>
+                        Clinique Les Babors
+                    </h5>
+                    <p>مصحة البابور - Établissement hospitalier privé offrant des services médicaux de qualité
+                        supérieure depuis plus de 15 ans.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i data-feather="facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i data-feather="twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i data-feather="instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5>Liens Rapides</h5>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#doctors">Médecins</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Spécialités</h5>
+                    <ul>
+                        <li><a href="#">Cardiologie</a></li>
+                        <li><a href="#">Gynéco-Obstétrique</a></li>
+                        <li><a href="#">Chirurgie Générale</a></li>
+                        <li><a href="#">Médecine Nucléaire</a></li>
+                        <li><a href="#">ORL</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Informations Contact</h5>
+                    <ul>
+                        <li>
+                            <i data-feather="map-pin" style="width: 16px; height: 16px; margin-right: 0.5rem;"></i>
+                            Cité Les Babors, Sétif 19000
+                        </li>
+                        <li>
+                            <i data-feather="phone" style="width: 16px; height: 16px; margin-right: 0.5rem;"></i>
+                            +213 (0) 36 XX XX XX
+                        </li>
+                        <li>
+                            <i data-feather="mail" style="width: 16px; height: 16px; margin-right: 0.5rem;"></i>
+                            info@cliniquebaabors.dz
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 Clinique Les Babors - مصحة البابور. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <a href="#">Politique de Confidentialité</a> |
+                        <a href="#">Conditions d'Utilisation</a> |
+                        <a href="#">Notice Médicale</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="main.js">
+    </script>
+</body>
+
+</html>
